@@ -1,0 +1,50 @@
+== Info:   Trying 127.0.0.1:3001...
+== Info: Connected to localhost (127.0.0.1) port 3001 (#0)
+=> Send header, 229 bytes (0xe5)
+0000: POST /payment_transactions HTTP/1.1
+0025: Host: localhost:3001
+003b: User-Agent: curl/7.81.0
+0054: Accept: */*
+0061: Authorization: Basic Y29kZW1vbnN0ZXI6bXk1ZWNyZXQta2V5Mm8ybw==
+00a0: Content-Type: application/json;charset=UTF-8
+00ce: Content-Length: 129
+00e3: 
+=> Send data, 129 bytes (0x81)
+0000: {.    "payment_transaction": {.      "reference_id": "0276491f62
+0040: 705d63c7f10c70bd87c10b",.      "transaction_type": "void".    }.
+0080: }
+== Info: Mark bundle as not supporting multiuse
+<= Recv header, 35 bytes (0x23)
+0000: HTTP/1.1 422 Unprocessable Entity
+<= Recv header, 29 bytes (0x1d)
+0000: X-Frame-Options: SAMEORIGIN
+<= Recv header, 33 bytes (0x21)
+0000: X-XSS-Protection: 1; mode=block
+<= Recv header, 33 bytes (0x21)
+0000: X-Content-Type-Options: nosniff
+<= Recv header, 28 bytes (0x1c)
+0000: X-Download-Options: noopen
+<= Recv header, 41 bytes (0x29)
+0000: X-Permitted-Cross-Domain-Policies: none
+<= Recv header, 50 bytes (0x32)
+0000: Referrer-Policy: strict-origin-when-cross-origin
+<= Recv header, 47 bytes (0x2f)
+0000: Content-Type: application/json; charset=utf-8
+<= Recv header, 14 bytes (0xe)
+0000: Vary: Accept
+<= Recv header, 25 bytes (0x19)
+0000: Cache-Control: no-cache
+<= Recv header, 52 bytes (0x34)
+0000: X-Request-Id: a6a52e49-9484-4f5e-9974-8a9a87f72f94
+<= Recv header, 21 bytes (0x15)
+0000: X-Runtime: 0.003505
+<= Recv header, 28 bytes (0x1c)
+0000: Transfer-Encoding: chunked
+<= Recv header, 2 bytes (0x2)
+0000: 
+<= Recv data, 62 bytes (0x3e)
+0000: 33
+0004: {"reference_id":["Invalid reference transaction!"]}
+0039: 0
+003c: 
+== Info: Connection #0 to host localhost left intact

@@ -1,0 +1,58 @@
+== Info:   Trying 127.0.0.1:3001...
+== Info: Connected to localhost (127.0.0.1) port 3001 (#0)
+=> Send header, 229 bytes (0xe5)
+0000: POST /payment_transactions HTTP/1.1
+0025: Host: localhost:3001
+003b: User-Agent: curl/7.81.0
+0054: Accept: */*
+0061: Authorization: Basic Y29kZW1vbnN0ZXI6bXk1ZWNyZXQta2V5Mm8ybw==
+00a0: Content-Type: application/json;charset=UTF-8
+00ce: Content-Length: 333
+00e3: 
+=> Send data, 333 bytes (0x14d)
+0000: {.    "payment_transaction": {.      "card_number": "42000000000
+0040: 00000",.      "cvv": "123",.      "expiration_date": "06/2019",.
+0080:       "amount": "500",.      "usage": "Coffeemaker",.      "tran
+00c0: saction_type": "sale",.      "card_holder": "Panda Panda",.     
+0100:  "email": "panda@example.com",.      "address": "Panda Street, C
+0140: hina".    }.}
+== Info: Mark bundle as not supporting multiuse
+<= Recv header, 17 bytes (0x11)
+0000: HTTP/1.1 200 OK
+<= Recv header, 29 bytes (0x1d)
+0000: X-Frame-Options: SAMEORIGIN
+<= Recv header, 33 bytes (0x21)
+0000: X-XSS-Protection: 1; mode=block
+<= Recv header, 33 bytes (0x21)
+0000: X-Content-Type-Options: nosniff
+<= Recv header, 28 bytes (0x1c)
+0000: X-Download-Options: noopen
+<= Recv header, 41 bytes (0x29)
+0000: X-Permitted-Cross-Domain-Policies: none
+<= Recv header, 50 bytes (0x32)
+0000: Referrer-Policy: strict-origin-when-cross-origin
+<= Recv header, 47 bytes (0x2f)
+0000: Content-Type: application/json; charset=utf-8
+<= Recv header, 14 bytes (0xe)
+0000: Vary: Accept
+<= Recv header, 44 bytes (0x2c)
+0000: ETag: W/"2e593f9f549c9caf28a17f4f30f898f5"
+<= Recv header, 52 bytes (0x34)
+0000: Cache-Control: max-age=0, private, must-revalidate
+<= Recv header, 52 bytes (0x34)
+0000: X-Request-Id: 882b34fb-e13e-440c-95ac-6e23d936916c
+<= Recv header, 21 bytes (0x15)
+0000: X-Runtime: 0.018980
+<= Recv header, 28 bytes (0x1c)
+0000: Transfer-Encoding: chunked
+<= Recv header, 2 bytes (0x2)
+0000: 
+<= Recv data, 208 bytes (0xd0)
+0000: c5
+0004: {"unique_id":"f1d1612ba539bea60c6cf4bcdd42a469","status":"approv
+0044: ed","usage":"Coffeemaker","amount":500,"transaction_time":"2023-
+0084: 01-19T20:04:43.605Z","message":"Your transaction has been approv
+00c4: ed."}
+00cb: 0
+00ce: 
+== Info: Connection #0 to host localhost left intact
